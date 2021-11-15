@@ -1,0 +1,206 @@
+/* ===============
+    Blog Showcase
+   ===============  */
+   .blog-showcase {
+    width: 100%;
+    height: 300px;
+    background: url('../images/blog-background.jpg') no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;;
+    background-size: 100%;
+    position: relative;
+    border-radius: .1rem;
+    z-index: 1;
+}
+
+.blog-showcase:after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: -1;
+}
+
+.blog-showcase-title {
+    text-align: center;
+}
+
+.blog-showcase-title h2 {
+    font-family: var(--raleway-font-family);
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--theme-font-dark-grey-color);
+    margin-bottom: 1rem;
+}
+
+.blog-showcase-title-btns {
+    font-size: 1.2rem;
+    color: var(--theme-font-dark-grey-color);
+}
+
+.blog-showcase-title-btns span a,
+.blog-showcase-title-btns span i {
+    color: var(--theme-blue-color);
+}
+
+.blog-showcase-title-btns span i {
+    margin: 0 1rem;
+}
+
+.blog-showcase-title-btns span a:hover {
+    color: var(--theme-font-dark-grey-color);
+}
+
+/* ============
+    Blog Posts
+   ============ */
+.blog-posts {
+    margin: 4rem 0;
+}
+
+
+.blog-posts-all {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 3rem;
+}
+
+.blog-posts-contents {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 4rem 2rem;
+}
+
+.blog-post-item {
+    box-shadow: 0 0 3px #ccc;
+}
+
+.blog-post-item img {
+    height: 14rem;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.blog-post-item-info {
+    display: grid;
+    grid-template-columns: .3fr 1.5fr;
+    margin: 1rem 0;
+    gap: 1rem;
+}
+
+.blog-post-date {
+    background-color: var(--theme-blue-color);
+    border-top: 1px solid var(--theme-lighter-grey-color);
+    border-left: 1px solid var(--theme-lighter-grey-color);
+    border-right: 1px solid var(--theme-lighter-grey-color);
+    color: var(--white);
+    text-align: center;
+    line-height: 1.4rem;
+    font-size: 1.2rem;
+    padding: .5rem;
+}
+
+.blog-post-comments p {
+    border-bottom: 1px solid var(--theme-lighter-grey-color);
+    border-left: 1px solid var(--theme-lighter-grey-color);
+    border-right: 1px solid var(--theme-lighter-grey-color);
+    text-align: center;
+    line-height: 1rem;
+    font-size: 1rem;
+    padding: .5rem;
+    color: var(--dark-grey);
+}
+
+.blog-post-comments i {
+    margin-right: .3rem;
+}
+
+.blog-post-info-other h4 {
+    font-size: 1.3rem;
+    font-family: var(--raleway-font-family);
+    font-weight: 800;
+    color: var(--theme-font-dark-grey-color);
+    line-height: 1.6rem;
+    margin-bottom: .7rem;
+}
+
+.blog-post-info-other h4:hover {
+    color: var(--theme-blue-color)
+}
+
+.blog-post-info-other .theme-paragraph {
+    color: var(--theme-med-grey-color);
+    margin: .5rem 0;
+    font-size: .9rem;
+    line-height: 1.3rem;
+    width: 95%;
+}
+
+.categories {
+    font-size: .8rem;
+}
+
+.categories span {
+    color: var(--theme-blue-color);
+}
+
+/*  styles for pagination */
+.all-btns{
+   transform: translate(25%);
+   margin: 1.5rem 0 0 0;
+}
+.paginate{
+    color: white;
+    background: var(--theme-blue-color);
+    padding: .5rem;
+    border-radius: 5px;
+    border: none;
+    text-transform: capitalize;
+    margin: 0 .5rem;
+    opacity: 0.7;
+}
+.numbers{
+    color: white;
+    background: var(--theme-blue-color);
+    padding: .5rem .8rem;
+    border-radius: 5px;
+    border: none;
+    text-transform: capitalize;
+    margin: 0 .1rem; 
+    opacity: 0.7;
+}
+.numbers.active{
+    background:var(--theme-blue-color);
+    opacity: 1;
+}
+
+/* back to top btn */
+
+.back-to-top{
+    border: none;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+   background: #2f9ec14d;
+    opacity: 0;
+    position:fixed;
+    right: 5%;
+    bottom: 10%;
+    z-index: 999;
+    transition: opacity 0.5s ease;
+    cursor: pointer;
+}
+.show{
+    opacity: 1;
+}
